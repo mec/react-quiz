@@ -2,6 +2,7 @@ import React from 'react';
 import Multi from './multi';
 import Check from './check';
 import Short from './short';
+import Long from './long';
 
 const Question = ({question, onValueChange}) => {
   switch (question.type) {
@@ -30,7 +31,7 @@ const Question = ({question, onValueChange}) => {
       return (
           <fieldset>
             <label>{question.title}</label>
-            <textarea></textarea>
+            <Long value={question.value} uid={question.uid} onValueChange={onValueChange}/>
           </fieldset>
       );
     default:
