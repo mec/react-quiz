@@ -27,7 +27,7 @@ class App extends React.Component {
 
   handleChange(event, uid) {
     // Get the question that matches the uid
-    let question = this.state.quiz.questions.find(question => question.uid == uid);
+    let question = this.state.quiz.questions.find(question => question.uid === uid);
     // Get the index of that question
     const index = this.state.quiz.questions.indexOf(question);
     // Change the value
@@ -35,7 +35,7 @@ class App extends React.Component {
     // splice the updated question in
     this.state.quiz.questions.splice(index, 1, question);
     // Set the state
-    let newState = this.state;
+    // let newState = this.state;
   }
 
   handleSubmit (event) {
